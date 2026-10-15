@@ -1,0 +1,1013 @@
+
+/* =========================
+   RISOL BUK ANA
+   STYLE UTAMA WEBSITE
+========================= */
+
+:root {
+    --cokelat: #78350f;
+    --cokelat-gelap: #431407;
+    --oranye: #f59e0b;
+    --krem: #fffaf0;
+    --putih: #ffffff;
+    --teks: #3f2a1d;
+    --hijau: #4d7c0f;
+    --bayangan: 0 10px 30px rgba(67, 20, 7, 0.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--krem);
+    color: var(--teks);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--oranye);
+    outline-offset: 4px;
+}
+
+.section {
+    padding: 80px 7%;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 16px 6%;
+    background: var(--putih);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.brand img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.brand h1 {
+    color: var(--cokelat);
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.brand h1 span,
+.footer-brand span {
+    color: var(--oranye);
+}
+
+.brand p {
+    font-size: 12px;
+    color: #806d5d;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.navbar a:hover,
+.footer-links a:hover {
+    color: var(--oranye);
+}
+
+.header-cart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--cokelat);
+    color: var(--putih);
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.header-cart b {
+    background: var(--oranye);
+    color: var(--cokelat-gelap);
+    border-radius: 50%;
+    min-width: 23px;
+    height: 23px;
+    display: grid;
+    place-items: center;
+}
+
+/* HERO */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+    padding: 75px 8%;
+    background: linear-gradient(135deg, #fff7e5, #ffedd5);
+    overflow: hidden;
+}
+
+.badge,
+.section-label {
+    display: inline-block;
+    color: var(--cokelat);
+    background: #ffedc2;
+    padding: 7px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero h2 {
+    margin: 20px 0;
+    font-size: clamp(34px, 4.5vw, 58px);
+    line-height: 1.15;
+    color: var(--cokelat-gelap);
+}
+
+.hero h2 span {
+    color: #c46b13;
+}
+
+.hero-content > p {
+    max-width: 520px;
+    color: #715d4d;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-whatsapp {
+    display: inline-block;
+    border-radius: 30px;
+    padding: 12px 22px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: var(--cokelat);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--cokelat-gelap);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid var(--cokelat);
+    color: var(--cokelat);
+}
+
+.btn-secondary:hover {
+    background: #ffedc2;
+}
+
+.hero-info {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.hero-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-info strong {
+    color: var(--cokelat);
+    font-size: 19px;
+}
+
+.hero-info span {
+    font-size: 12px;
+    color: #806d5d;
+}
+
+.hero-image {
+    position: relative;
+    max-width: 440px;
+    width: 100%;
+    margin: auto;
+    padding: 12px;
+}
+
+.hero-image > img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid white;
+    box-shadow: var(--bayangan);
+}
+
+.floating-label {
+    position: absolute;
+    background: white;
+    color: var(--cokelat);
+    border-radius: 25px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: var(--bayangan);
+}
+
+.label-top {
+    top: 14%;
+    right: -10px;
+}
+
+.label-bottom {
+    bottom: 12%;
+    left: -15px;
+}
+
+/* JUDUL SECTION */
+
+.section-heading {
+    text-align: center;
+    margin: 0 auto 40px;
+    max-width: 650px;
+}
+
+.section-heading h2 {
+    font-size: clamp(25px, 3vw, 36px);
+    line-height: 1.3;
+    color: var(--cokelat-gelap);
+    margin: 14px 0;
+}
+
+.section-heading p {
+    color: #806d5d;
+    font-size: 14px;
+}
+
+/* PRODUK */
+
+.produk-section {
+    background: white;
+}
+
+.produk-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 340px));
+    justify-content: center;
+    gap: 30px;
+}
+
+.produk {
+    background: white;
+    border: 1px solid #f1e3d0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--bayangan);
+    transition: transform 0.25s;
+}
+
+.produk:hover {
+    transform: translateY(-6px);
+}
+
+.produk-image {
+    position: relative;
+    background: #fff0d5;
+    overflow: hidden;
+}
+
+.produk-image img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.produk:hover .produk-image img {
+    transform: scale(1.04);
+}
+
+.produk-tag {
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    left: 14px;
+    background: #fff;
+    color: var(--cokelat);
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tag-sayur {
+    color: var(--hijau);
+}
+
+.produk-info {
+    padding: 22px;
+}
+
+.rasa {
+    font-size: 12px;
+    color: #b76b21;
+    font-weight: bold;
+}
+
+.produk-info h3 {
+    color: var(--cokelat-gelap);
+    font-size: 23px;
+    margin: 5px 0;
+}
+
+.produk-deskripsi {
+    color: #806d5d;
+    font-size: 14px;
+    min-height: 70px;
+}
+
+.produk-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.produk-bottom strong {
+    color: var(--cokelat);
+    font-size: 20px;
+}
+
+.btn-tambah {
+    border: none;
+    background: var(--cokelat);
+    color: white;
+    border-radius: 25px;
+    padding: 10px 16px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.btn-tambah:hover {
+    background: var(--oranye);
+    color: var(--cokelat-gelap);
+}
+
+/* KEUNGGULAN */
+
+.keunggulan-section {
+    padding: 80px 7%;
+    background: #fff7e8;
+}
+
+.keunggulan-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.keunggulan-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: var(--bayangan);
+}
+
+.keunggulan-card > span {
+    display: block;
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.keunggulan-card h3 {
+    color: var(--cokelat);
+    margin-bottom: 8px;
+}
+
+.keunggulan-card p {
+    color: #806d5d;
+    font-size: 13px;
+}
+
+/* KERANJANG */
+
+.keranjang-section {
+    background: white;
+}
+
+.keranjang-box {
+    max-width: 750px;
+    margin: auto;
+    padding: 28px;
+    border: 1px solid #f1e3d0;
+    border-radius: 20px;
+    box-shadow: var(--bayangan);
+}
+
+.keranjang-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.keranjang-header h3 {
+    color: var(--cokelat);
+}
+
+.btn-hapus {
+    border: none;
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btn-hapus:hover {
+    background: #fecaca;
+}
+
+.keranjang-kosong {
+    padding: 30px 10px;
+    text-align: center;
+    color: #806d5d;
+}
+
+.keranjang-kosong > span {
+    font-size: 45px;
+}
+
+.keranjang-kosong h3 {
+    color: var(--cokelat);
+    margin: 8px 0;
+}
+
+.keranjang-kosong p {
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.item-keranjang {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 17px 0;
+    border-bottom: 1px solid #f0e4d5;
+}
+
+.item-keranjang h4 {
+    color: var(--cokelat);
+}
+
+.item-keranjang small {
+    color: #806d5d;
+    font-size: 12px;
+}
+
+.item-keranjang p {
+    color: var(--cokelat);
+    margin-top: 4px;
+}
+
+.item-kanan {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.kontrol-jumlah {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.kontrol-jumlah button {
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ffedc2;
+    color: var(--cokelat);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.kontrol-jumlah button:hover {
+    background: var(--oranye);
+}
+
+.ringkasan {
+    padding-top: 20px;
+}
+
+.ringkasan-baris {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.total-baris {
+    padding-top: 15px;
+    border-top: 1px dashed #dfc7a9;
+    font-size: 17px;
+}
+
+.total-baris strong {
+    color: var(--cokelat);
+    font-size: 21px;
+}
+
+.btn-checkout {
+    width: 100%;
+    border: none;
+    background: #15803d;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-checkout:hover {
+    background: #166534;
+}
+
+.checkout-note {
+    color: #806d5d;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+/* TENTANG KAMI */
+
+.tentang-section {
+    background: #fff7e8;
+}
+
+.tentang-box {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.tentang-visual {
+    background: #ffedc2;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+.tentang-visual img {
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.tentang-content h2 {
+    color: var(--cokelat-gelap);
+    font-size: clamp(25px, 3vw, 35px);
+    line-height: 1.3;
+    margin: 15px 0;
+}
+
+.tentang-content p {
+    color: #715d4d;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.tentang-content .btn-primary {
+    margin-top: 10px;
+}
+
+/* JAM OPERASIONAL */
+
+.operasional-section {
+    background: white;
+}
+
+.operasional-box {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: #fffaf0;
+    border: 1px solid #f1e3d0;
+    box-shadow: var(--bayangan);
+    text-align: center;
+}
+
+.operasional-icon {
+    font-size: 40px;
+}
+
+.operasional-box h3 {
+    color: var(--cokelat);
+    margin: 10px 0 20px;
+}
+
+.jam-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    text-align: left;
+    padding: 13px 0;
+    border-bottom: 1px solid #eadbc8;
+    font-size: 13px;
+}
+
+.jam-item strong {
+    color: var(--cokelat);
+    text-align: right;
+}
+
+.jam-catatan {
+    margin-top: 20px;
+    color: #806d5d;
+    font-size: 12px;
+}
+
+/* KONTAK */
+
+.kontak-section {
+    background: #fff7e8;
+}
+
+.kontak-box {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 35px;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    padding: 35px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: var(--bayangan);
+}
+
+.kontak-content h2 {
+    color: var(--cokelat-gelap);
+    font-size: clamp(26px, 3vw, 36px);
+    line-height: 1.3;
+    margin: 15px 0;
+}
+
+.kontak-content > p {
+    color: #806d5d;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.kontak-detail {
+    display: grid;
+    gap: 18px;
+}
+
+.kontak-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.kontak-item > span {
+    font-size: 25px;
+}
+
+.kontak-item div {
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: anywhere;
+}
+
+.kontak-item small {
+    color: #806d5d;
+}
+
+.kontak-item a {
+    color: var(--cokelat);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.kontak-emoji {
+    text-align: center;
+    padding: 30px 15px;
+    background: #fff7e8;
+    border-radius: 20px;
+    font-size: 65px;
+}
+
+.kontak-emoji p {
+    color: var(--cokelat);
+    font-size: 15px;
+    font-weight: bold;
+    margin: 12px 0 20px;
+}
+
+.btn-whatsapp {
+    background: #15803d;
+    color: white;
+    font-size: 13px;
+}
+
+.btn-whatsapp:hover {
+    background: #166534;
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 45px 7% 25px;
+    text-align: center;
+    background: var(--cokelat-gelap);
+    color: white;
+}
+
+.footer-brand {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.footer > p {
+    color: #f3d9b8;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin: 25px 0;
+    font-size: 13px;
+}
+
+.copyright {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* NOTIFIKASI */
+
+.notifikasi {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    background: var(--cokelat-gelap);
+    color: white;
+    padding: 13px 22px;
+    border-radius: 30px;
+    font-size: 13px;
+    box-shadow: var(--bayangan);
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s;
+    width: max-content;
+    max-width: 90%;
+    text-align: center;
+}
+
+.notifikasi.tampil {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+/* RESPONSIVE HP DAN TABLET */
+
+@media (max-width: 1000px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .navbar {
+        order: 3;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .hero {
+        gap: 25px;
+        padding: 60px 6%;
+    }
+
+    .hero-image {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 700px) {
+    html {
+        scroll-padding-top: 150px;
+    }
+
+    .section {
+        padding: 55px 5%;
+    }
+
+    .header {
+        padding: 12px 5%;
+        gap: 12px;
+    }
+
+    .brand img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .brand h1 {
+        font-size: 17px;
+    }
+
+    .brand p {
+        font-size: 10px;
+    }
+
+    .header-cart {
+        padding: 8px 11px;
+        font-size: 12px;
+    }
+
+    .navbar {
+        gap: 10px 17px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 6%;
+        text-align: center;
+    }
+
+    .hero-content > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons,
+    .hero-info {
+        justify-content: center;
+    }
+
+    .hero-image {
+        max-width: 280px;
+        margin-top: 15px;
+    }
+
+    .floating-label {
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+
+    .produk-container {
+        grid-template-columns: minmax(0, 420px);
+    }
+
+    .produk-image img {
+        height: auto;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+    }
+
+    .keunggulan-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tentang-box,
+    .kontak-box {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .tentang-visual {
+        max-width: 350px;
+        margin: auto;
+    }
+
+    .keranjang-box,
+    .operasional-box,
+    .kontak-box {
+        padding: 22px 17px;
+    }
+
+    .produk-info h3 {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 380px) {
+    .header-cart {
+        gap: 5px;
+        font-size: 11px;
+        padding: 7px 9px;
+    }
+
+    .brand {
+        gap: 7px;
+    }
+
+    .brand h1 {
+        font-size: 15px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero-info {
+        gap: 17px;
+    }
+
+    .produk-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .item-keranjang {
+        align-items: flex-start;
+    }
+
+    .jam-item {
+        font-size: 11px;
+    }
+}
